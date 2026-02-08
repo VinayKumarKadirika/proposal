@@ -19,7 +19,7 @@
     }
 
     .card {
-      max-width: 720px;
+      max-width: 740px;
       padding: 55px;
       background: rgba(0,0,0,0.35);
       border-radius: 22px;
@@ -30,13 +30,37 @@
     p {
       font-size: 1.35rem;
       line-height: 1.9;
-      margin-bottom: 35px;
+      margin-bottom: 28px;
     }
 
     .final {
       font-size: 1.6rem;
       font-weight: bold;
       margin-top: 10px;
+    }
+
+    .audio-text {
+      font-size: 1rem;
+      margin-top: 30px;
+      opacity: 0.85;
+      font-style: italic;
+    }
+
+    .play-btn {
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      background: #ffffff;
+      color: #141E30;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
     @keyframes fadeIn {
@@ -47,6 +71,11 @@
 </head>
 
 <body>
+
+  <!-- Audio -->
+  <audio id="bgm">
+    <source src="assets/audio/love.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="card">
     <p>
@@ -69,7 +98,22 @@
     <p class="final">
       Would you like to see where this could go?
     </p>
+
+    <div class="audio-text">
+      There’s something I want you to hear… 🎧
+    </div>
+
+    <button class="play-btn" onclick="playAudio()">
+      ▶ Listen to my proposal
+    </button>
   </div>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById("bgm");
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
