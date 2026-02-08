@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just One Question</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just One Thought</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #141E30, #243B55);
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, #141E30, #243B55);
       font-family: 'Georgia', serif;
       color: #ffffff;
       text-align: center;
     }
 
     .card {
-      max-width: 740px;
-      padding: 55px;
-      background: rgba(0,0,0,0.35);
+      max-width: 90%;
+      max-height: 90vh;
+      padding: 26px;
+      background: rgba(0, 0, 0, 0.35);
       border-radius: 22px;
-      backdrop-filter: blur(12px);
-      animation: fadeIn 1.6s ease;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.4s ease;
+      overflow: hidden;
     }
 
     p {
-      font-size: 1.35rem;
-      line-height: 1.9;
-      margin-bottom: 28px;
+      font-size: clamp(14px, 4vw, 18px);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      opacity: 0.95;
     }
 
     .final {
-      font-size: 1.6rem;
-      font-weight: bold;
+      font-size: clamp(16px, 4.5vw, 20px);
+      font-weight: 600;
       margin-top: 10px;
     }
 
     .audio-text {
-      font-size: 1rem;
-      margin-top: 30px;
-      opacity: 0.85;
+      font-size: clamp(12px, 3vw, 14px);
+      margin-top: 18px;
+      opacity: 0.8;
       font-style: italic;
     }
 
     .play-btn {
-      margin-top: 15px;
-      padding: 12px 28px;
-      font-size: 1rem;
+      margin-top: 14px;
+      padding: 10px 26px;
+      font-size: 0.95rem;
       border-radius: 30px;
       border: none;
       cursor: pointer;
@@ -64,55 +76,33 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Audio -->
+  <!-- Audio (user-triggered only) -->
   <audio id="bgm">
     <source src="assets/audio/love.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="card">
-    <p>
-      I like you.<br>
-      Not suddenly.<br>
-      Not casually.
-    </p>
-
-    <p>
-      I like the comfort.<br>
-      I like the conversations.<br>
-      And I like how things feel with you.
-    </p>
-
-    <p>
-      I don’t want to rush this.<br>
-      I just want to be honest.
-    </p>
-    
-    <p>
-      you are my calm.<br>
-      you are my chaos.<br>
-      you are the softness I never knew I needed.
-    </p>
-
-    <p class="final">
-      Happy Happy propose day ❤️
-    </p>
-
-    <div class="audio-text">
-      There’s something I want you to hear… 🎧
-    </div>
-
-    <button class="play-btn" onclick="playAudio()">
-      ▶ click here for a cute proposal
-    </button>
-  </div>
+  <div class="card"> 
+    <p> I like you.<br> Not suddenly.<br> Not casually. </p> 
+    <p> I like the comfort.<br> I like the conversations.<br> And I like how things feel with you. </p> 
+    <p> I don’t want to rush this.<br> I just want to be honest. </p> 
+    <p> you are my calm.<br> you are my chaos.<br> you are the softness I never knew I needed. </p> 
+    <p class="final"> Happy Happy propose day ❤️ </p> 
+    <div class="audio-text"> There’s something I want you to hear… 🎧 </div> 
+    <button class="play-btn" onclick="playAudio()"> ▶ click here for a cute proposal </button> </div>
 
   <script>
     function playAudio() {
