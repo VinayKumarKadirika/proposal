@@ -15,61 +15,41 @@
       justify-content: center;
       font-family: 'Georgia', serif;
       color: #ffffff;
+      text-align: center;
     }
 
     .card {
-      max-width: 700px;
-      padding: 50px;
+      max-width: 720px;
+      padding: 55px;
       background: rgba(0,0,0,0.35);
-      border-radius: 20px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1.5s ease;
+      border-radius: 22px;
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1.6s ease;
     }
 
     p {
-      font-size: 1.3rem;
-      line-height: 1.8;
-      margin-bottom: 40px;
+      font-size: 1.35rem;
+      line-height: 1.9;
+      margin-bottom: 35px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    button {
-      padding: 12px 30px;
-      font-size: 1rem;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .yes {
-      background: white;
-      color: black;
-    }
-
-    .think {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
+    .final {
+      font-size: 1.6rem;
+      margin-top: 20px;
+      font-weight: bold;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Autoplay Audio -->
-  <audio autoplay>
+  <!-- Audio -->
+  <audio id="bgm">
     <source src="assets/audio/love.mp3" type="audio/mpeg">
   </audio>
 
@@ -81,17 +61,38 @@
     </p>
 
     <p>
-      I like what we have.<br>
-      And I’d like to know<br>
-      if we could make this something more.
+      I like the comfort.<br>
+      I like the conversations.<br>
+      And I like how things feel with you.
     </p>
 
-    <div class="buttons">
-      <button class="yes" onclick="alert('That makes me really happy ❤️')">Yes</button>
-      <button class="think" onclick="alert('Take your time. I respect that.')">Let me think</button>
-    </div>
+    <p>
+      I don’t want to rush this.<br>
+      I just want to be honest.
+    </p>
+
+    <p class="final">
+      Would you like to see where this could go?
+    </p>
   </div>
+
+  <script>
+    const audio = document.getElementById("bgm");
+
+    // Try autoplay on load (works on desktop)
+    window.addEventListener("load", () => {
+      audio.play().catch(() => {
+        // Autoplay blocked, wait for user interaction
+      });
+    });
+
+    // Fallback: play on first user tap/click
+    document.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+      }
+    }, { once: true });
+  </script>
 
 </body>
 </html>
-
