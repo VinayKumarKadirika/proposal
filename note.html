@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A Little Note 💜</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
       font-family: 'Georgia', serif;
       color: #2c2c2c;
       text-align: center;
     }
 
     .card {
-      max-width: 760px;
-      padding: 55px;
-      background: rgba(255,255,255,0.5);
-      border-radius: 24px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      animation: fadeIn 1.4s ease;
+      max-width: 90%;
+      max-height: 90vh;
+      padding: 26px;
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 22px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease;
+      overflow: hidden;
     }
 
     p {
-      font-size: 1.25rem;
-      line-height: 2;
-      margin-bottom: 22px;
+      font-size: clamp(14px, 4vw, 18px);
+      line-height: 1.6;
+      margin-bottom: 12px;
     }
 
     .highlight {
       font-weight: bold;
       color: #6a0572;
-      font-size: 1.45rem;
+      font-size: clamp(16px, 4.5vw, 20px);
     }
 
     .closing {
-      margin-top: 30px;
-      font-size: 1.3rem;
+      margin-top: 14px;
+      font-size: clamp(13px, 3.5vw, 16px);
       font-style: italic;
       color: #5a0f6f;
     }
 
     .hint {
-      margin-top: 8px;
-      font-size: 1rem;
-      opacity: 0.7;
+      margin-top: 6px;
+      font-size: clamp(12px, 3vw, 14px);
+      opacity: 0.75;
     }
 
     .nav-btn {
-      margin-top: 35px;
-      padding: 12px 32px;
-      font-size: 1rem;
+      margin-top: 18px;
+      padding: 10px 28px;
+      font-size: 0.95rem;
       border-radius: 30px;
       border: none;
       cursor: pointer;
@@ -67,56 +78,41 @@
 
     .nav-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(25px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <p>
-      I want to be a <span class="highlight">K</span>ing just to make you my queen 👑💖
-    </p>
-
-    <p>
-      I want to be an <span class="highlight">E</span>instein just to light up your world 💡✨
-    </p>
-
-    <p>
-      I want to be an <span class="highlight">E</span>raser just to remove toxicity in your life 🧹💫
-    </p>
-
-    <p>
-      I want to be a <span class="highlight">R</span>iver just to wash out the sorrow in your life 🌊💙
-    </p>
-
-    <p>
-      I want to be a <span class="highlight">T</span>ransformer just to step up your happiness ⚡😊
-    </p>
-
-    <p>
-      I want to be a <span class="highlight">H</span>eadlight just to guide you through darkness 🌙🚗
-    </p>
-
-    <p>
-      I want to be an <span class="highlight">I</span>mmortal just to love you forever ♾️❤️
-    </p>
+  <div class="card"> 
+    <p> I want to be a <span class="highlight">K</span>ing just to make you my queen 👑💖 </p> 
+    <p> I want to be an <span class="highlight">E</span>instein just to light up your world 💡✨ </p> 
+    <p> I want to be an <span class="highlight">E</span>raser just to remove toxicity in your life 🧹💫 </p> 
+    <p> I want to be a <span class="highlight">R</span>iver just to wash out the sorrow in your life 🌊💙 </p> 
+    <p> I want to be a <span class="highlight">T</span>ransformer just to step up your happiness ⚡😊 </p> 
+    <p> I want to be a <span class="highlight">H</span>eadlight just to guide you through darkness 🌙🚗 </p> 
+    <p> I want to be an <span class="highlight">I</span>mmortal just to love you forever ♾️❤️ </p>
 
     <div class="closing">
       veelithe ksheminchu, lekapothe sikshinchu.
     </div>
 
     <div class="hint">
-      End of the day nannu preminchu 😜❤️.
+      End of the day… nannu preminchu 😌💜
     </div>
 
-    <!-- Navigation Button -->
     <button class="nav-btn" onclick="location.href='propose.html'">
       Continue →
     </button>
