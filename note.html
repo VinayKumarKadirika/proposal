@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Note</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Georgia', serif;
+      color: #2c2c2c;
+    }
+
+    .card {
+      max-width: 650px;
+      padding: 45px;
+      background: rgba(255,255,255,0.45);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: 1px solid #2c2c2c;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <p>
+      I like the way conversations feel with you.<br>
+      Easy. Honest. Comfortable.
+    </p>
+
+    <p>
+      This isn’t impulsive.<br>
+      I’ve thought about it.<br>
+      And I wanted you to know that.
+    </p>
+
+    <p>
+      There’s one more thing<br>
+      I want to ask you.
+    </p>
+
+    <button onclick="location.href='propose.html'">Next →</button>
+  </div>
+</body>
+</html>
 
