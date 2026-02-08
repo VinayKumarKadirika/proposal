@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Note</title>
+  <title>A Note for You</title>
 
   <style>
     body {
@@ -15,60 +15,78 @@
       justify-content: center;
       font-family: 'Georgia', serif;
       color: #2c2c2c;
+      text-align: center;
     }
 
     .card {
-      max-width: 650px;
-      padding: 45px;
+      max-width: 750px;
+      padding: 50px;
       background: rgba(255,255,255,0.45);
-      border-radius: 18px;
+      border-radius: 22px;
       backdrop-filter: blur(10px);
-      text-align: center;
-      animation: fadeIn 1.2s ease;
+      animation: fadeIn 1.4s ease;
     }
 
     p {
       font-size: 1.25rem;
-      line-height: 1.8;
-      margin-bottom: 35px;
+      line-height: 1.9;
+      margin-bottom: 22px;
     }
 
-    button {
-      padding: 12px 30px;
-      font-size: 1rem;
-      border-radius: 30px;
-      border: 1px solid #2c2c2c;
-      background: transparent;
-      cursor: pointer;
+    .highlight {
+      font-weight: bold;
+      color: #6a0572;
+      font-size: 1.4rem;
+    }
+
+    .closing {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      font-style: italic;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(25px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
+
   <div class="card">
     <p>
-      I like the way conversations feel with you.<br>
-      Easy. Honest. Comfortable.
+      I want to be a <span class="highlight">K</span>ing just to make her my queen.
     </p>
 
     <p>
-      This isn’t impulsive.<br>
-      I’ve thought about it.<br>
-      And I wanted you to know that.
+      I want to be an <span class="highlight">E</span>instein just to light up her world.
     </p>
 
     <p>
-      There’s one more thing<br>
-      I want to ask you.
+      I want to be an <span class="highlight">E</span>raser just to remove toxicity in her life.
     </p>
 
-    <button onclick="location.href='propose.html'">Next →</button>
+    <p>
+      I want to be a <span class="highlight">R</span>iver just to wash out the sorrow in her life.
+    </p>
+
+    <p>
+      I want to be a <span class="highlight">T</span>ransformer just to step up her happiness.
+    </p>
+
+    <p>
+      I want to be a <span class="highlight">H</span>eadlight just to guide her through darkness.
+    </p>
+
+    <p>
+      I want to be an <span class="highlight">I</span>mmortal just to love you forever.
+    </p>
+
+    <div class="closing">
+      (Read the first letters carefully 💜)
+    </div>
   </div>
+
 </body>
 </html>
-
